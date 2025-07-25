@@ -34,6 +34,12 @@ fn add_10_shared(
     barrier()
 
     # FILL ME IN (roughly 2 lines)
+    # https://puzzles.modular.com/puzzle_08/puzzle_08.html
+    # Implement a kernel that adds 10 to each position of a vector a and stores it in vector output.
+    # Note: You have fewer threads per block than the size of a.
+
+    if global_i < size:
+        output[global_i] = shared[local_i] + 10
 
 
 # ANCHOR_END: add_10_shared

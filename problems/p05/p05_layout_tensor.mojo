@@ -27,6 +27,14 @@ fn broadcast_add[
     col = thread_idx.x
     # FILL ME IN (roughly 2 lines)
 
+    # https://puzzles.modular.com/puzzle_05/puzzle_05.html
+    # Puzzle 5: Broadcast. Implement a kernel that broadcast adds vector a 
+    # and vector b and stores it in 2D matrix output. Note: You have more threads 
+    # than positions.
+
+    if row < size and col < size:
+        output[row, col] = a[0, col] + b[row, 0]
+
 
 # ANCHOR_END: broadcast_add_layout_tensor
 def main():

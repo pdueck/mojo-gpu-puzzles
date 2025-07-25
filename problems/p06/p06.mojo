@@ -18,6 +18,13 @@ fn add_10_blocks(
     i = block_dim.x * block_idx.x + thread_idx.x
     # FILL ME IN (roughly 2 lines)
 
+    # https://puzzles.modular.com/puzzle_06/puzzle_06.html
+    # Implement a kernel that adds 10 to each position of vector a and stores it in output.
+    # Note: You have fewer threads per block than the size of a.
+
+    if i < size:
+        output[i] = a[i] + 10
+
 
 # ANCHOR_END: add_10_blocks
 

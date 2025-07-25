@@ -19,6 +19,13 @@ fn add_10_blocks_2d(
     col = block_dim.x * block_idx.x + thread_idx.x
     # FILL ME IN (roughly 2 lines)
 
+    # https://puzzles.modular.com/puzzle_07/puzzle_07.html
+    # Implement a kernel that adds 10 to each position of matrix a and stores it in output.
+    # Note: You have fewer threads per block than the size of a in both directions.
+
+    if row < size and col < size:
+        output[row * size + col] = a[row * size + col] + 10
+
 
 # ANCHOR_END: add_10_blocks_2d
 
